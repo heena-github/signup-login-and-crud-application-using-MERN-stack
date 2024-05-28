@@ -1,18 +1,8 @@
-const model=require('../Model/employees')
+const model=require('../Model/employeeModel')
 const Employee=model.Employee
 
-exports.createEmployee = async (req,res)=>{
-const newEmployee=new Employee(req.body)
-newEmployee.save()
-.then((doc)=>{
-console.log(doc)
-res.status(201).json(doc)
-})
-.catch((err)=>{
-console.log(err)
-res.status(400).json(err.message)
-})
-}
+
+
 
 exports.allEmployees=async (req,res)=>{
     const employees=await Employee.find()

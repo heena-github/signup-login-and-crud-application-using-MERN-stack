@@ -3,7 +3,6 @@ const router=express.Router()
 const employeeController = require('../controller/employeeController')
 
 router
-.post('/',employeeController.createEmployee)
 .get('/',employeeController.allEmployees)
 .get('/:id',employeeController.singleEmployee)
 .put('/:id',employeeController.replaceEmployee)
